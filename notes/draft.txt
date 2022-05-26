@@ -1,0 +1,17 @@
+fn load_cron():
+    Load file with cron jobs to memory from file
+    Split file to line by line
+    Filter out comment lines
+    Check if all other lines are valid cron lines (check if cron parser can parse)
+    Filter out all jobs that run every minute
+    Filter out any other cron jobs that run more than X times per day using the hourly entry
+    Store any unfiltered in memory
+
+ 
+
+fn monitor():
+    while true:
+        Scan through the list of cron jobs and find the one that is due next.
+        Determine number of seconds to that moment minus the offset
+        Sleep up to to that [moment minus offset]
+        Awake and immediately send ‘wake on lan’ packet

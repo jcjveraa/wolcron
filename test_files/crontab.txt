@@ -1,0 +1,26 @@
+#--------------------------------------------------
+# example unix/linux crontab file format:
+#--------------------------------------------------
+# min,hour,dayOfMonth,month,dayOfWeek command
+#
+# field          allowed values
+# -----          --------------
+# minute         0-59
+# hour           0-23
+# day of month   1-31
+# month          1-12 (or names, see below)
+# day of week    0-7 (0 or 7 is Sun, or use names)
+#
+#--------------------------------------------------
+
+#  every hour of every day
+0 * * * * /do/something
+
+# 3 in the morning every 2nd day of month
+0 3 2 * * /do/something
+
+# 2 in the morning every 7th, 14th, 21st and 28th of month
+0 2 7,14,21,28 * * /do/something
+
+# 3 in the morning every monday
+0 3 * * 1 /do/something
